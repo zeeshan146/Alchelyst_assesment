@@ -1,0 +1,113 @@
+const { test, expect } = require('@playwright/test');
+const { LoginPage } = require('../pages/LoginPage');
+const { TrialBalancePage } = require('../pages/TrialBalancePage');
+
+test.describe('Trial Balance Tests', () => {
+  let loginPage;
+  let trialBalancePage;
+
+  test.beforeEach(async ({ page }) => {
+    loginPage = new LoginPage(page);
+    trialBalancePage = new TrialBalancePage(page);
+
+    console.log('🔐 Logging in...');
+    await loginPage.login('TestUser', 'Password@123');
+    console.log('✅ Login successful');
+  });
+
+  test('Trial Balance Navigation', async ({ page }) => {
+    console.log('📋 Testing Trial Balance navigation...');
+    
+    await trialBalancePage.navigateToReport();
+    console.log('✅ Navigation to Trial Balance works');
+    
+    // Click on Trial Balance link
+    const trialBalanceLink = page.locator("//span[normalize-space(text())='Trial Balance']");
+    await trialBalanceLink.waitFor({ state: 'visible', timeout: 10000 });
+    await trialBalanceLink.click();
+    
+    // Wait for data to load
+    await page.waitForLoadState('networkidle', { timeout: 15000 });
+    await page.waitForTimeout(2000);
+    
+    // Verify data is loaded
+    const dataRows = page.locator('table tbody tr, .mx-datagrid tbody tr, .mx-listview tbody tr');
+    const rowCount = await dataRows.count();
+    expect(rowCount).toBeGreaterThan(0);
+    console.log(`✅ Trial Balance data loaded: ${rowCount} rows`);
+  });
+
+  test('Trial Balance with Fund Selection', async ({ page }) => {
+    console.log('📋 Testing Trial Balance with fund selection...');
+    
+    await trialBalancePage.navigateToReport();
+    
+    // Click on Trial Balance link
+    const trialBalanceLink = page.locator("//span[normalize-space(text())='Trial Balance']");
+    await trialBalanceLink.waitFor({ state: 'visible', timeout: 10000 });
+    await trialBalanceLink.click();
+    
+    // Wait for data to load
+    await page.waitForLoadState('networkidle', { timeout: 15000 });
+    await page.waitForTimeout(2000);
+    
+    // Select fund
+    const fundDropdown = page.locator("//select[contains(@id,'referenceSelector1')]");
+    await fundDropdown.waitFor({ state: 'visible', timeout: 10000 });
+    await fundDropdown.selectOption('Steerhead Alternative Energy Fund');
+    console.log('✅ Fund selected');
+    
+    // Wait for data to update
+    await page.waitForLoadState('networkidle', { timeout: 10000 });
+    await page.waitForTimeout(3000);
+    
+    // Verify View Report button
+    await trialBalancePage.verifyViewReportButton();
+    console.log('✅ View Report button available');
+  });
+
+  test('Trial Balance with View Report and Export', async ({ page }) => {
+    console.log('📋 Testing Trial Balance with View Report and Export...');
+    
+    await trialBalancePage.navigateToReport();
+    
+    // Click on Trial Balance link
+    const trialBalanceLink = page.locator("//span[normalize-space(text())='Trial Balance']");
+    await trialBalanceLink.waitFor({ state: 'visible', timeout: 10000 });
+    await trialBalanceLink.click();
+    
+    // Wait for data to load
+    await page.waitForLoadState('networkidle', { timeout: 15000 });
+    await page.waitForTimeout(2000);
+    
+    // Select fund
+    const fundDropdown = page.locator("//select[contains(@id,'referenceSelector1')]");
+    await fundDropdown.waitFor({ state: 'visible', timeout: 10000 });
+    await fundDropdown.selectOption('Steerhead Alternative Energy Fund');
+    
+    // Wait for data to update
+    await page.waitForLoadState('networkidle', { timeout: 10000 });
+    await page.waitForTimeout(3000);
+    
+    // Click View Report
+    await trialBalancePage.clickViewReport();
+    console.log('✅ View Report clicked');
+    
+    // Wait for Export button (smart wait up to 5 minutes)
+    const exportButton = page.locator("//button[normalize-space()='Export']");
+    await exportButton.waitFor({ state: 'visible', timeout: 300000 });
+    console.log('✅ Export button appeared - report loaded');
+    
+    // Pause and click Export
+    await page.waitForTimeout(5000);
+    await exportButton.click();
+    await page.waitForTimeout(5000);
+    console.log('✅ Export completed');
+    
+    // Verify report data
+    const reportDataRows = page.locator('table tbody tr, .mx-datagrid tbody tr, .mx-listview tbody tr');
+    const reportRowCount = await reportDataRows.count();
+    expect(reportRowCount).toBeGreaterThan(0);
+    console.log(`✅ Report data verified: ${reportRowCount} rows`);
+  });
+});

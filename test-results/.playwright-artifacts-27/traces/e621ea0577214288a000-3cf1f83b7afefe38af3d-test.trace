@@ -1,0 +1,89 @@
+{"version":8,"type":"context-options","origin":"testRunner","browserName":"","options":{},"platform":"darwin","wallTime":1759477642000,"monotonicTime":1277203.272,"sdkLanguage":"javascript"}
+{"type":"before","callId":"hook@1","stepId":"hook@1","startTime":1277210.948,"class":"Test","method":"hook","title":"Before Hooks","params":{},"stack":[]}
+{"type":"before","callId":"hook@2","stepId":"hook@2","parentId":"hook@1","startTime":1277211.781,"class":"Test","method":"hook","title":"beforeEach hook","params":{},"stack":[{"file":"/Users/mdzeeshanreza/Documents/alchelyst/tests/assessment-short.spec.js","line":38,"column":8}]}
+{"type":"before","callId":"fixture@27","stepId":"fixture@27","parentId":"hook@2","startTime":1277230.657,"class":"Test","method":"fixture","title":"Fixture \"browser\"","params":{},"stack":[]}
+{"type":"before","callId":"pw:api@28","stepId":"pw:api@28","parentId":"fixture@27","startTime":1277232.786,"class":"Test","method":"pw:api","title":"Launch browser","params":{"handleSIGINT":"false","tracesDir":"/Users/mdzeeshanreza/Documents/alchelyst/test-results/.playwright-artifacts-27/traces","headless":"true","ignoreDefaultArgs":"undefined","ignoreAllDefaultArgs":"false","env":"undefined","timeout":"180000"},"stack":[]}
+{"type":"after","callId":"pw:api@28","endTime":1277480.597,"annotations":[]}
+{"type":"after","callId":"fixture@27","endTime":1277480.787,"annotations":[]}
+{"type":"before","callId":"fixture@31","stepId":"fixture@31","parentId":"hook@2","startTime":1277483.545,"class":"Test","method":"fixture","title":"Fixture \"context\"","params":{},"stack":[]}
+{"type":"before","callId":"pw:api@32","stepId":"pw:api@32","parentId":"fixture@31","startTime":1277678.724,"class":"Test","method":"pw:api","title":"Create context","params":{"acceptDownloads":"accept","bypassCSP":"false","colorScheme":"light","deviceScaleFactor":"1","hasTouch":"false","ignoreHTTPSErrors":"false","isMobile":"false","javaScriptEnabled":"true","locale":"en-US","offline":"false","storageState":"Object","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.7339.186 Safari/537.36","viewport":"Object","baseURL":"https://aurum-test.alchelyst.com","serviceWorkers":"allow","selectorEngines":"[]","testIdAttributeName":"data-testid","noDefaultViewport":"false","extraHTTPHeaders":"undefined","reducedMotion":"undefined","forcedColors":"undefined","contrast":"undefined","clientCertificates":"undefined"},"stack":[]}
+{"type":"after","callId":"pw:api@32","endTime":1278007.373,"annotations":[]}
+{"type":"after","callId":"fixture@31","endTime":1278020.562,"annotations":[]}
+{"type":"before","callId":"fixture@33","stepId":"fixture@33","parentId":"hook@2","startTime":1278021.379,"class":"Test","method":"fixture","title":"Fixture \"page\"","params":{},"stack":[]}
+{"type":"before","callId":"pw:api@34","stepId":"pw:api@34","parentId":"fixture@33","startTime":1278024.027,"class":"Test","method":"pw:api","title":"Create page","params":{},"stack":[]}
+{"type":"after","callId":"pw:api@34","endTime":1278150.479,"annotations":[]}
+{"type":"after","callId":"fixture@33","endTime":1278150.606,"annotations":[]}
+{"type":"before","callId":"pw:api@35","stepId":"pw:api@35","parentId":"hook@2","startTime":1278153.652,"class":"Test","method":"pw:api","title":"Navigate to \"/\"","params":{"url":"https://aurum-test.alchelyst.com","waitUntil":"load","timeout":"0"},"stack":[{"file":"/Users/mdzeeshanreza/Documents/alchelyst/tests/assessment-short.spec.js","line":43,"column":16}]}
+{"type":"after","callId":"pw:api@35","endTime":1280120.939,"annotations":[]}
+{"type":"before","callId":"pw:api@36","stepId":"pw:api@36","parentId":"hook@2","startTime":1280122.151,"class":"Test","method":"pw:api","title":"Wait for load state \"networkidle\"","params":{"info":"Object"},"stack":[{"file":"/Users/mdzeeshanreza/Documents/alchelyst/tests/assessment-short.spec.js","line":44,"column":16}]}
+{"type":"after","callId":"pw:api@36","endTime":1282949.621,"annotations":[]}
+{"type":"before","callId":"pw:api@37","stepId":"pw:api@37","parentId":"hook@2","startTime":1282950.576,"class":"Test","method":"pw:api","title":"Is visible locator('text=Report Centre')","params":{"selector":"text=Report Centre","strict":"true","timeout":"10000"},"stack":[{"file":"/Users/mdzeeshanreza/Documents/alchelyst/tests/assessment-short.spec.js","line":46,"column":65}],"group":"getter"}
+{"type":"after","callId":"pw:api@37","endTime":1282960.471,"annotations":[]}
+{"type":"stdout","timestamp":1282960.558,"text":"Logging in...\n"}
+{"type":"before","callId":"pw:api@38","stepId":"pw:api@38","parentId":"hook@2","startTime":1282961.14,"class":"Test","method":"pw:api","title":"Wait for load state \"networkidle\"","params":{"info":"Object"},"stack":[{"file":"/Users/mdzeeshanreza/Documents/alchelyst/tests/assessment-short.spec.js","line":50,"column":18}]}
+{"type":"after","callId":"pw:api@38","endTime":1282961.243,"annotations":[]}
+{"type":"before","callId":"pw:api@39","stepId":"pw:api@39","parentId":"hook@2","startTime":1282962.913,"class":"Test","method":"pw:api","title":"Wait for selector locator('input[type=\"text\"]').first()","params":{"selector":"input[type=\"text\"] >> nth=0","strict":"true","omitReturnValue":"true","state":"visible","timeout":"30000"},"stack":[{"file":"/Users/mdzeeshanreza/Documents/alchelyst/pages/LoginPage.js","line":23,"column":30,"function":"LoginPage.fillUsername"}]}
+{"type":"after","callId":"pw:api@39","endTime":1282966.352,"annotations":[]}
+{"type":"before","callId":"pw:api@40","stepId":"pw:api@40","parentId":"hook@2","startTime":1282967.154,"class":"Test","method":"pw:api","title":"Fill \"TestUser\" locator('input[type=\"text\"]').first()","params":{"selector":"input[type=\"text\"] >> nth=0","value":"TestUser","strict":"true","timeout":"0"},"stack":[{"file":"/Users/mdzeeshanreza/Documents/alchelyst/pages/LoginPage.js","line":24,"column":30,"function":"LoginPage.fillUsername"}]}
+{"type":"after","callId":"pw:api@40","endTime":1282972.679,"annotations":[]}
+{"type":"stdout","timestamp":1282972.718,"text":"Filled username: TestUser\n"}
+{"type":"before","callId":"pw:api@41","stepId":"pw:api@41","parentId":"hook@2","startTime":1282973.398,"class":"Test","method":"pw:api","title":"Wait for selector locator('input[type=\"password\"]').first()","params":{"selector":"input[type=\"password\"] >> nth=0","strict":"true","omitReturnValue":"true","state":"visible","timeout":"30000"},"stack":[{"file":"/Users/mdzeeshanreza/Documents/alchelyst/pages/LoginPage.js","line":30,"column":30,"function":"LoginPage.fillPassword"}]}
+{"type":"after","callId":"pw:api@41","endTime":1282975.637,"annotations":[]}
+{"type":"before","callId":"pw:api@42","stepId":"pw:api@42","parentId":"hook@2","startTime":1282976.141,"class":"Test","method":"pw:api","title":"Fill \"Password@123\" locator('input[type=\"password\"]').first()","params":{"selector":"input[type=\"password\"] >> nth=0","value":"Password@123","strict":"true","timeout":"0"},"stack":[{"file":"/Users/mdzeeshanreza/Documents/alchelyst/pages/LoginPage.js","line":31,"column":30,"function":"LoginPage.fillPassword"}]}
+{"type":"after","callId":"pw:api@42","endTime":1283010.833,"annotations":[]}
+{"type":"stdout","timestamp":1283010.875,"text":"Filled password: Password@123\n"}
+{"type":"before","callId":"pw:api@43","stepId":"pw:api@43","parentId":"hook@2","startTime":1283011.631,"class":"Test","method":"pw:api","title":"Wait for selector locator('button[type=\"submit\"], input[type=\"submit\"], button:has-text(\"Login\"), button:has-text(\"Sign In\")').first()","params":{"selector":"button[type=\"submit\"], input[type=\"submit\"], button:has-text(\"Login\"), button:has-text(\"Sign In\") >> nth=0","strict":"true","omitReturnValue":"true","state":"visible","timeout":"30000"},"stack":[{"file":"/Users/mdzeeshanreza/Documents/alchelyst/pages/LoginPage.js","line":37,"column":28,"function":"LoginPage.clickLogin"}]}
+{"type":"after","callId":"pw:api@43","endTime":1283013.84,"annotations":[]}
+{"type":"before","callId":"pw:api@44","stepId":"pw:api@44","parentId":"hook@2","startTime":1283014.455,"class":"Test","method":"pw:api","title":"Click locator('button[type=\"submit\"], input[type=\"submit\"], button:has-text(\"Login\"), button:has-text(\"Sign In\")').first()","params":{"selector":"button[type=\"submit\"], input[type=\"submit\"], button:has-text(\"Login\"), button:has-text(\"Sign In\") >> nth=0","strict":"true","timeout":"0"},"stack":[{"file":"/Users/mdzeeshanreza/Documents/alchelyst/pages/LoginPage.js","line":38,"column":28,"function":"LoginPage.clickLogin"}]}
+{"type":"after","callId":"pw:api@44","endTime":1283043.128,"annotations":[]}
+{"type":"stdout","timestamp":1283043.171,"text":"Clicked login button\n"}
+{"type":"before","callId":"pw:api@45","stepId":"pw:api@45","parentId":"hook@2","startTime":1283043.628,"class":"Test","method":"pw:api","title":"Wait for timeout","params":{"waitTimeout":"3000"},"stack":[{"file":"/Users/mdzeeshanreza/Documents/alchelyst/pages/LoginPage.js","line":47,"column":21,"function":"LoginPage.login"}]}
+{"type":"after","callId":"pw:api@45","endTime":1286047.803,"annotations":[]}
+{"type":"stdout","timestamp":1286047.854,"text":"Login completed\n"}
+{"type":"before","callId":"pw:api@46","stepId":"pw:api@46","parentId":"hook@2","startTime":1286048.501,"class":"Test","method":"pw:api","title":"Wait for load state \"networkidle\"","params":{"info":"Object"},"stack":[{"file":"/Users/mdzeeshanreza/Documents/alchelyst/tests/assessment-short.spec.js","line":52,"column":18}]}
+{"type":"after","callId":"pw:api@46","endTime":1286048.953,"annotations":[]}
+{"type":"before","callId":"pw:api@47","stepId":"pw:api@47","parentId":"hook@2","startTime":1286049.26,"class":"Test","method":"pw:api","title":"Wait for selector locator('text=Report Centre')","params":{"selector":"text=Report Centre","strict":"true","omitReturnValue":"true","state":"visible","timeout":"30000"},"stack":[{"file":"/Users/mdzeeshanreza/Documents/alchelyst/tests/assessment-short.spec.js","line":53,"column":48}]}
+{"type":"after","callId":"pw:api@47","endTime":1286057.493,"annotations":[]}
+{"type":"stdout","timestamp":1286057.535,"text":"Login successful\n"}
+{"type":"after","callId":"hook@2","endTime":1286057.559,"annotations":[]}
+{"type":"after","callId":"hook@1","endTime":1286057.755,"annotations":[]}
+{"type":"stdout","timestamp":1286057.977,"text":"Testing: Accounting section expansion\n"}
+{"type":"before","callId":"pw:api@48","stepId":"pw:api@48","startTime":1286058.435,"class":"Test","method":"pw:api","title":"Click locator('xpath=(//img[@role=\\'button\\' and contains(@src,\\'ClickArrow.svg\\')])[2]')","params":{"selector":"(//img[@role='button' and contains(@src,'ClickArrow.svg')])[2]","strict":"true","timeout":"0"},"stack":[{"file":"/Users/mdzeeshanreza/Documents/alchelyst/tests/assessment-short.spec.js","line":150,"column":35}]}
+{"type":"after","callId":"pw:api@48","endTime":1286098.502,"annotations":[]}
+{"type":"before","callId":"pw:api@49","stepId":"pw:api@49","startTime":1286099.333,"class":"Test","method":"pw:api","title":"Wait for timeout","params":{"waitTimeout":"3000"},"stack":[{"file":"/Users/mdzeeshanreza/Documents/alchelyst/tests/assessment-short.spec.js","line":151,"column":16}]}
+{"type":"after","callId":"pw:api@49","endTime":1289104.147,"annotations":[]}
+{"type":"before","callId":"pw:api@50","stepId":"pw:api@50","startTime":1289104.872,"class":"Test","method":"pw:api","title":"Click locator('//a[@role=\\'tab\\' and normalize-space(text())=\\'Live Reports\\']')","params":{"selector":"//a[@role='tab' and normalize-space(text())='Live Reports']","strict":"true","timeout":"0"},"stack":[{"file":"/Users/mdzeeshanreza/Documents/alchelyst/tests/assessment-short.spec.js","line":152,"column":38}]}
+{"type":"after","callId":"pw:api@50","endTime":1289135.365,"annotations":[]}
+{"type":"before","callId":"pw:api@51","stepId":"pw:api@51","startTime":1289136.353,"class":"Test","method":"pw:api","title":"Wait for timeout","params":{"waitTimeout":"3000"},"stack":[{"file":"/Users/mdzeeshanreza/Documents/alchelyst/tests/assessment-short.spec.js","line":153,"column":16}]}
+{"type":"after","callId":"pw:api@51","endTime":1292141.759,"annotations":[]}
+{"type":"before","callId":"expect@52","stepId":"expect@52","startTime":1292142.857,"class":"Test","method":"expect","title":"Expect \"toBeVisible\"","params":{"expected":"Object"},"stack":[{"file":"/Users/mdzeeshanreza/Documents/alchelyst/tests/assessment-short.spec.js","line":154,"column":49}]}
+{"type":"after","callId":"expect@52","endTime":1292146.806,"annotations":[]}
+{"type":"before","callId":"pw:api@53","stepId":"pw:api@53","startTime":1292147.132,"class":"Test","method":"pw:api","title":"Click locator('//span[contains(@class,\\'widget-tree-node-branch-header-clickable\\') and .//span[text()=\\'Accounting\\']]')","params":{"selector":"//span[contains(@class,'widget-tree-node-branch-header-clickable') and .//span[text()='Accounting']]","strict":"true","timeout":"0"},"stack":[{"file":"/Users/mdzeeshanreza/Documents/alchelyst/tests/assessment-short.spec.js","line":155,"column":41}]}
+{"type":"after","callId":"pw:api@53","endTime":1292160.902,"annotations":[]}
+{"type":"before","callId":"pw:api@54","stepId":"pw:api@54","startTime":1292161.261,"class":"Test","method":"pw:api","title":"Wait for timeout","params":{"waitTimeout":"2000"},"stack":[{"file":"/Users/mdzeeshanreza/Documents/alchelyst/tests/assessment-short.spec.js","line":156,"column":16}]}
+{"type":"after","callId":"pw:api@54","endTime":1294163.444,"annotations":[]}
+{"type":"stdout","timestamp":1294163.514,"text":"SUCCESS: Accounting section expansion works correctly\n"}
+{"type":"before","callId":"hook@55","stepId":"hook@55","startTime":1294163.93,"class":"Test","method":"hook","title":"After Hooks","params":{},"stack":[]}
+{"type":"before","callId":"fixture@56","stepId":"fixture@56","parentId":"hook@55","startTime":1294164.305,"class":"Test","method":"fixture","title":"Fixture \"page\"","params":{},"stack":[]}
+{"type":"after","callId":"fixture@56","endTime":1294164.359,"annotations":[]}
+{"type":"before","callId":"fixture@57","stepId":"fixture@57","parentId":"hook@55","startTime":1294164.464,"class":"Test","method":"fixture","title":"Fixture \"context\"","params":{},"stack":[]}
+{"type":"before","callId":"pw:api@58","stepId":"pw:api@58","parentId":"fixture@57","startTime":1294346.578,"class":"Test","method":"pw:api","title":"Close context","params":{"reason":"Test ended."},"stack":[]}
+{"type":"after","callId":"pw:api@58","endTime":1294348.627,"annotations":[]}
+{"type":"after","callId":"fixture@57","endTime":1294348.668,"annotations":[]}
+{"type":"before","callId":"fixture@67","stepId":"fixture@67","parentId":"hook@55","startTime":1294349.344,"class":"Test","method":"fixture","title":"Fixture \"baseURL\"","params":{},"stack":[{"file":"project#chromium","line":1,"column":1}],"group":"configuration"}
+{"type":"after","callId":"fixture@67","endTime":1294349.355,"annotations":[]}
+{"type":"before","callId":"fixture@68","stepId":"fixture@68","parentId":"hook@55","startTime":1294349.46,"class":"Test","method":"fixture","title":"Fixture \"userAgent\"","params":{},"stack":[{"file":"project#chromium","line":1,"column":1}],"group":"configuration"}
+{"type":"after","callId":"fixture@68","endTime":1294349.467,"annotations":[]}
+{"type":"before","callId":"fixture@70","stepId":"fixture@70","parentId":"hook@55","startTime":1294349.567,"class":"Test","method":"fixture","title":"Fixture \"viewport\"","params":{},"stack":[{"file":"project#chromium","line":1,"column":1}],"group":"configuration"}
+{"type":"after","callId":"fixture@70","endTime":1294349.574,"annotations":[]}
+{"type":"before","callId":"fixture@71","stepId":"fixture@71","parentId":"hook@55","startTime":1294349.621,"class":"Test","method":"fixture","title":"Fixture \"storageState\"","params":{},"stack":[{"file":"project#chromium","line":1,"column":1}],"group":"configuration"}
+{"type":"after","callId":"fixture@71","endTime":1294349.627,"annotations":[]}
+{"type":"before","callId":"fixture@77","stepId":"fixture@77","parentId":"hook@55","startTime":1294349.967,"class":"Test","method":"fixture","title":"Fixture \"isMobile\"","params":{},"stack":[{"file":"project#chromium","line":1,"column":1}],"group":"configuration"}
+{"type":"after","callId":"fixture@77","endTime":1294349.973,"annotations":[]}
+{"type":"before","callId":"fixture@81","stepId":"fixture@81","parentId":"hook@55","startTime":1294350.2,"class":"Test","method":"fixture","title":"Fixture \"hasTouch\"","params":{},"stack":[{"file":"project#chromium","line":1,"column":1}],"group":"configuration"}
+{"type":"after","callId":"fixture@81","endTime":1294350.207,"annotations":[]}
+{"type":"before","callId":"fixture@83","stepId":"fixture@83","parentId":"hook@55","startTime":1294350.314,"class":"Test","method":"fixture","title":"Fixture \"deviceScaleFactor\"","params":{},"stack":[{"file":"project#chromium","line":1,"column":1}],"group":"configuration"}
+{"type":"after","callId":"fixture@83","endTime":1294350.322,"annotations":[]}
+{"type":"after","callId":"hook@55","endTime":1294350.613,"annotations":[]}
+{"type":"before","callId":"attach@ea8c6b61e20dc63f7ab839d688ff685c","stepId":"attach@ea8c6b61e20dc63f7ab839d688ff685c","startTime":1294498.906,"class":"Test","method":"test.attach","title":"Attach \"trace\"","params":{},"stack":[]}
+{"type":"after","callId":"attach@ea8c6b61e20dc63f7ab839d688ff685c","endTime":1294498.965,"attachments":[]}

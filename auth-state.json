@@ -1,0 +1,75 @@
+{
+  "cookies": [
+    {
+      "name": "originURI",
+      "value": "/login.html",
+      "domain": "aurum-test.alchelyst.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "__Host-SessionTimeZoneOffset",
+      "value": "-330",
+      "domain": "aurum-test.alchelyst.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "xasid",
+      "value": "0.037eb43e-563d-4eb3-b8b5-f5fd0c2d86a6",
+      "domain": "aurum-test.alchelyst.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Host-DeviceType",
+      "value": "Desktop",
+      "domain": "aurum-test.alchelyst.com",
+      "path": "/",
+      "expires": 1790862418.436152,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Host-Profile",
+      "value": "Responsive",
+      "domain": "aurum-test.alchelyst.com",
+      "path": "/",
+      "expires": 1790862418.43617,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Host-XASSESSIONID",
+      "value": "0a8b8955-96e4-4800-a348-14b8976f1d7d",
+      "domain": "aurum-test.alchelyst.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://aurum-test.alchelyst.com",
+      "localStorage": [
+        {
+          "name": "mxfeedback-form-data__a1a28408-7bfc-4a04-a5ba-8a1bff193824",
+          "value": "{\"title\":\"\",\"description\":\"\",\"email\":\"\",\"screenshot\":\"\",\"timestamp\":\"\"}"
+        }
+      ]
+    }
+  ]
+}

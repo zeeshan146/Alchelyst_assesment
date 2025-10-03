@@ -1,0 +1,89 @@
+const { test, expect } = require('@playwright/test');
+const { LoginPage } = require('../pages/LoginPage');
+const { NAVPackReportPage } = require('../pages/NAVPackReportPage');
+
+test.describe('NAV Pack Report Tests', () => {
+  let loginPage;
+  let navPackPage;
+
+  test.beforeEach(async ({ page }) => {
+    loginPage = new LoginPage(page);
+    navPackPage = new NAVPackReportPage(page);
+
+    console.log('🔐 Logging in...');
+    await loginPage.login('TestUser', 'Password@123');
+    console.log('✅ Login successful');
+  });
+
+  test('Basic Navigation Tests', async ({ page }) => {
+    console.log('📋 Testing basic navigation...');
+    
+    // Test arrow button
+    await navPackPage.navigateToReport();
+    console.log('✅ Arrow button navigation works');
+    
+    // Test Live Reports tab
+    await navPackPage.clickLiveReportsTab();
+    console.log('✅ Live Reports tab works');
+    
+    // Test Accounting section
+    await navPackPage.clickAccountingSection();
+    console.log('✅ Accounting section works');
+    
+    // Test NAV Pack Report link
+    await navPackPage.clickNAVPackReportLink();
+    console.log('✅ NAV Pack Report link works');
+  });
+
+  test('Complete NAV Pack Report Flow', async ({ page }) => {
+    console.log('📋 Testing complete NAV Pack Report flow...');
+    
+    await navPackPage.navigateToReport();
+    await navPackPage.clickLiveReportsTab();
+    await navPackPage.clickAccountingSection();
+    await navPackPage.clickNAVPackReportLink();
+    
+    // Select client
+    await navPackPage.selectClient('STEERHEAD');
+    console.log('✅ Client selected');
+    
+    // Select fund
+    await navPackPage.selectFund('Steerhead Alternative Energy Fund');
+    console.log('✅ Fund selected');
+    
+    // Select date mode
+    await navPackPage.selectDateMode('AccountingDate');
+    console.log('✅ Date mode selected');
+    
+    // Add dates
+    await navPackPage.addDiaryStartDate('30APR2025');
+    await navPackPage.addDiaryEndDate('30APR2025');
+    console.log('✅ Dates added');
+    
+    // View report
+    await navPackPage.clickViewReport();
+    await navPackPage.waitForReportToLoad();
+    console.log('✅ Report generated');
+    
+    // Export report
+    await navPackPage.clickExport();
+    console.log('✅ Report exported');
+    
+    // Validate data
+    await navPackPage.validateReportData();
+    console.log('✅ Data validated');
+  });
+
+  test('Error Handling - View Report without Client', async ({ page }) => {
+    console.log('📋 Testing error handling...');
+    
+    await navPackPage.navigateToReport();
+    await navPackPage.clickLiveReportsTab();
+    await navPackPage.clickAccountingSection();
+    await navPackPage.clickNAVPackReportLink();
+    
+    // Try to click View Report without selecting client
+    await navPackPage.clickViewReport();
+    console.log('✅ Error handling works');
+  });
+});

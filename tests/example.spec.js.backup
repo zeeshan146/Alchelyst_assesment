@@ -1,0 +1,15 @@
+// @ts-check
+const { test, expect } = require('@playwright/test');
+
+test('basic navigation example', async ({ page }) => {
+  // Navigate to Alchelyst site
+  await page.goto('/');
+  
+  // Wait for page to load
+  await page.waitForLoadState('networkidle');
+  
+  // Check if page loaded successfully
+  await expect(page).toHaveURL(/aurum-test\.alchelyst\.com/);
+  
+  console.log('✅ Basic navigation test completed');
+});
